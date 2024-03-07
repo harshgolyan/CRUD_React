@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express')
 const mongoose = require('mongoose');
 const { MONGOURI } = require('./keys');
 const cors = require('cors')
