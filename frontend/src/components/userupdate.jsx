@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-const baseUrl = process.env.REACT_APP_BACKEND_URL;
 
 
 const UserUpdate = ({ isOpen, onClose, rowData }) => {
