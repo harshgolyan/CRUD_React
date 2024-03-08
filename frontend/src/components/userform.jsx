@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import UserUpdate from "./userupdate";
-const baseUrl = process.env.REACT_APP_BACKEND_URL;
+
 
 
 const UserForm = () => {
@@ -15,7 +15,7 @@ const UserForm = () => {
    const [isModalOpen, setIsModalOpen] = useState(false);
 
    useEffect(() => {
-    fetch(`${baseUrl}/showAllUser`)
+    fetch(`https://crud-react-jlz6.onrender.com/showAllUser`)
       .then(res => res.json())
       .then(data => setRow(data))
       .catch(error => console.error('Error fetching data:', error));
@@ -34,7 +34,7 @@ const UserForm = () => {
    const onSubmitHandler = (e) =>{
     e.preventDefault()
     
-    fetch(`${baseUrl}/addUser`,{
+    fetch(`https://crud-react-jlz6.onrender.com/addUser`,{
         method:"post",
         headers:{
             "Content-Type":"application/json"
@@ -58,7 +58,7 @@ const UserForm = () => {
     setRow(updatedRows);
 
     // Delete row from backend
-    fetch(`${baseUrl}/deleteUser/${id}`, {
+    fetch(`https://crud-react-jlz6.onrender.com/deleteUser/${id}`, {
       method: 'delete'
     })
     .then(response => {

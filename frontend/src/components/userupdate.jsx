@@ -26,7 +26,7 @@ const UserUpdate = ({ isOpen, onClose, rowData }) => {
             hobbies: hobbies
         };
     
-        fetch(`${baseUrl}/updateUser/${rowData._id}`, {
+        fetch(`https://crud-react-jlz6.onrender.com/updateUser/${rowData._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
